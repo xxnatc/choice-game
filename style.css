@@ -74,3 +74,17 @@ nav a {
     cursor: pointer;
     padding: 5px 0;
 }
+
+
+
+#box1 {
+  height: 300px;
+  width: 300px;
+  border: 2px solid black;
+}
+
+#box2 {
+height: 300px;
+  width: 300px;
+  border: 2px solid black;
+}
