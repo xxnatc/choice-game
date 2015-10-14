@@ -1,5 +1,6 @@
 .wrapper {
   display: flex;
+  flex-direction: row;
   flex-flow: row wrap;
   width: 940px;
   margin: 20px auto 20px auto;
@@ -25,20 +26,19 @@ body{
   text-shadow: 2px 2px black;
   background: url("img/twin-peaks.png") no-repeat center top;
   text-align: center;
-
 }
 
 h1{
-  font-size: 44px;
+  font-size: 48px;
 }
 h2{
-  font-size: 54px;
+  font-size:90px;
 }
 
-main {
-  font-size 16px;
+.main {
+font-size 16px;
 display: flex;
-flex-direction: row;
+flex-direction: row wrap;
 flex-wrap: nowrap;
 justify-content: center;
 align-content: flex-start;
