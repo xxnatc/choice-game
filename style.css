@@ -35,7 +35,8 @@ h2{
   font-size: 54px;
 }
 
-.main {
+main {
+  font-size 16px;
 display: flex;
 flex-direction: row;
 flex-wrap: nowrap;
@@ -77,14 +78,13 @@ nav a {
 
 
 
-#box1 {
+#photoBox1 {
   height: 300px;
   width: 300px;
   border: 2px solid black;
 }
-
-#box2 {
-height: 300px;
+#photoBox2 {
+  height: 300px;
   width: 300px;
   border: 2px solid black;
 }
