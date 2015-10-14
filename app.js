@@ -10,23 +10,31 @@ function Image(character, path) {
 }
 
 //creates characters
-var dale = new Image("Dale Cooper", "img/dale-cooper.jpg", 0);
-var laura = new Image("Laura Palmer", "img/laura-palmer.jpg", 0);
-var donna = new Image("Donna Hayward", "img/donna-hayward.jpg", 0);
-var harry = new Image("Harry S. Truman", "img/harry-truman.jpg", 0);
-var lucy = new Image("Lucy Moran", "img/lucy-moran.jpg", 0);
-var audrey = new Image("Audrey Horne", "img/audrey-horne.jpg", 0);
+var dale = new Image("Dale Cooper", "img/dale-cooper.jpg");
+var laura = new Image("Laura Palmer", "img/laura-palmer.jpg");
+var donna = new Image("Donna Hayward", "img/donna-hayward.jpg");
+var harry = new Image("Harry S. Truman", "img/harry-truman.jpg");
+var lucy = new Image("Lucy Moran", "img/lucy-moran.jpg");
+var audrey = new Image("Audrey Horne", "img/audrey-horne.jpg");
+var ed = new Image("Ed Hurley", "img/ed-hurley.jpg");
+var james = new Image("James Hurley", "img/james-hurley.jpg");
+var norma = new Image("Norma Jennings", "img/norma-jennings.jpg");
+var nadine = new Image("Nadine Hurley", "img/nadine-hurley.jpg");
+var jacobi = new Image()
+
 console.log(tpCharacters);
 
 //workout random numbers
 var randomNum = function() {
-  return Math.floor(Math.random() * (tpCharacters.length - 1)) + 1;
+  return Math.floor(Math.random() * (tpCharacters.length));
 }
 
 console.log('randomNum output is: ' +randomNum());
 
-var randPhoto1 = document.getElementById('photo1');
-var randPhoto2 = document.getElementById('photo2');
+var randPhoto1 = document.getElementById('photoBox1');
+var randPhoto2 = document.getElementById('photoBox2');
+var characterName1 = document.getElementById('name1');
+var characterName2 = document.getElementById('name2');
 
 var chooseImage1, chooseImage2;
 
@@ -36,60 +44,25 @@ function compareImg() {
     chooseImage2 = randomNum();
 
     randPhoto1.src = tpCharacters[chooseImage1].path;
-    randphoto2.src = tpCharacters[chooseImage2].path;
+    randPhoto2.src = tpCharacters[chooseImage2].path;
+    characterName1.innerHTML = tpCharacters[chooseImage1].character;
+    characterName2.innerHTML = tpCharacters[chooseImage2].character;
   }
-  while (randphoto1 === randphoto2);
+  while (chooseImage1 === chooseImage2);
 }
 
 compareImg();
 
 randPhoto1.addEventListener('click', function(){
-  tpCharacters[randphoto1].vote += 1;
-  console.log(tpCharacters[randphoto1].character + "has "
-    + tpCharacters[randPhoto1].vote + "votes");
+  tpCharacters[chooseImage1].vote += 1;
+  console.log(tpCharacters[chooseImage1].character + " has "
+    + tpCharacters[chooseImage1].vote + " votes");
 compareImg();
 });
 
 randPhoto2.addEventListener('click', function(){
-  tpCharacters[randphoto1].vote += 1;
-  console.log(tpCharacters[randphoto1].character + "has "
-    + tpCharacters[randPhoto1].vote + "votes");
+  tpCharacters[chooseImage2].vote += 1;
+  console.log(tpCharacters[chooseImage2].character + " has "
+    + tpCharacters[chooseImage2].vote + " votes");
 compareImg();
 });
-
-
-
-// ++++++++++++++
-// var displayImage = function(){
-//   image1 = randomNum();
-//   image2 = randomNum();
-//     if (image1 == image2) {
-//     image2 = randomNum();
-//     console.log(image1)
-//     console.log(image2)
-//   }
-//   else {
-//   console.log(image1);
-//   console.log(image2);
-//   }
-// //dispay random photo 1
-//   var chooseImage1 = (tpCharacters[image1]);
-//   document.getElementById("photoBox1").src = chooseImage1["src"];
-//   console.log('vote: ' + chooseImage1.vote)
-//   var character1 = document.getElementById("photo1");
-//   character1.appendChild(document.createTextNode(chooseImage1["character"]));
-//   console.log(character1);
-// //and random photo 2
-//   var chooseImage2 = (tpCharacters[image2]);
-//   document.getElementById("photoBox2").src = chooseImage2["src"];
-//   console.log('vote: ' + chooseImage2.vote)
-//   var character2 = document.getElementById("photo1");
-//   character1.appendChild(document.createTextNode(chooseImage2["character"]));
-//   console.log(character2);
-// }
-
-// displayImage();
-
-// tracker.displayImage = function() {
-
-// }

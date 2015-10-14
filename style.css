@@ -34,9 +34,12 @@ h1{
 h2{
   font-size:90px;
 }
+h4 {
+  font-size: 30px;
+}
 
 .main {
-font-size 16px;
+font-size: 30px;
 display: flex;
 flex-direction: row wrap;
 flex-wrap: nowrap;
@@ -49,11 +52,6 @@ nav {
     padding: 35px 0;
      width: 100%
 }
-
-distribute {
-    text-align: justify;
-    text-justify: distribute;
-  }
 
 nav ul {
   clear: both;
@@ -76,15 +74,9 @@ nav a {
     padding: 5px 0;
 }
 
-
-
-#photoBox1 {
+#photoBox1, #photoBox2 {
   height: 300px;
   width: 300px;
   border: 2px solid black;
-}
-#photoBox2 {
-  height: 300px;
-  width: 300px;
-  border: 2px solid black;
+  flex-grow: 1;
 }
